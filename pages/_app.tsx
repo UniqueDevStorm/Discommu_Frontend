@@ -3,12 +3,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import styled from "styled-components";
 
 function MyApp({ Component, pageProps }) {
   return (
       <div>
-          <Navbar />
+          {/*<Navbar />*/}
           <div className='min-h-screen flex flex-col'>
               <div className='flex-grow'>
                   <Component {...pageProps} />
@@ -19,6 +18,6 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-library.add(fab)
+library.add(fab);
 
-export default MyApp
+export default MyApp;
