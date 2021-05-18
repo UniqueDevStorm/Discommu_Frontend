@@ -18,7 +18,7 @@ export async function getServerSideProps(ctx) {
     }
 }
 
-export default function Community({ ...key }) {
+export default function Category({ ...key }) {
     return (
         <div>
             <Navbar data={key.user} />
