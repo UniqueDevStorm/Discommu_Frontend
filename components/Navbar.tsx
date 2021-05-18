@@ -1,4 +1,5 @@
 import Link from "next/link";
+import React from "react";
 
 export default function Navbar({ data }) {
     return (
@@ -26,9 +27,9 @@ export default function Navbar({ data }) {
                     ? <div className='p-5 mt-1 text-lg'>
                         <a className='px-3 pt-1' href={process.env.API_URI}>로그인</a>
                     </div>
-                    : <div className='sm:p-2 p-1.5'>
+                    : <div className='p-2'>
                         <div className='flex'>
-                            <div className='sm:mt-5 mt-6 font-bold sm:text-xl text-sm sm:pr-4 pr-1'>
+                            <div className='sm:mt-4 mt-6 font-semibold sm:text-xl text-sm sm:pr-4 pr-1'>
                                 {
                                     data.username.length > 10
                                         ? <h1>{data.username.slice(0, 10)}..#{data.discriminator}</h1>

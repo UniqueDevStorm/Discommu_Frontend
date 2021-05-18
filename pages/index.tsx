@@ -4,6 +4,8 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 import cookie from 'cookie';
 import jwt from 'jsonwebtoken';
 import Navbar from "@components/Navbar";
+import React from "react";
+import { NextSeo } from "next-seo";
 
 export async function getServerSideProps(ctx) {
     let key = null;
@@ -24,6 +26,10 @@ export async function getServerSideProps(ctx) {
 export default function Home({ ...key }) {
     return (
         <div>
+            <NextSeo
+                title='Discommu'
+                description='디스코드의 게시판!'
+            />
             <Navbar data={key.user} />
             <div className = 'pt-16 w-full tracking-tighter'>
                 <div className = 'select-none w-4/5 h-56 pl-12 pt-12 mx-auto bg-gradient-to-r from-green-500 to-purple-500 rounded-3xl shadow-2xl'>
